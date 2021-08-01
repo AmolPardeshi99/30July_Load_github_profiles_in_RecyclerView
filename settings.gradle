@@ -1,0 +1,2 @@
+rootProject.name = "Load_github_profiles_in_RecyclerView"
+include ':app'
