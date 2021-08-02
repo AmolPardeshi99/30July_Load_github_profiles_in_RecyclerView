@@ -12,12 +12,12 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class ProfileAdapter extends RecyclerView.Adapter<ProfileViewHolder> {
+
     List<ResponseModel> responseModelList;
 
     public ProfileAdapter(List<ResponseModel> responseModelList) {
         this.responseModelList = responseModelList;
     }
-
     @NonNull
     @NotNull
     @Override

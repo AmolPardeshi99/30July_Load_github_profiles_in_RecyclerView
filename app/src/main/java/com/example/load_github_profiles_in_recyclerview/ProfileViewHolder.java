@@ -19,12 +19,12 @@ public class ProfileViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         mIvAvatar = itemView.findViewById(R.id.IvAvatar);
         mTvName = itemView.findViewById(R.id.tvName);
-        mTvUserId = itemView.findViewById(R.id.etUsername);
+        mTvUserId = itemView.findViewById(R.id.tvLogin);
     }
 
     public void setData(ResponseModel responseModel){
         Glide.with(mIvAvatar).load(responseModel.getOwner().getAvatarUrl()).into(mIvAvatar);
         mTvName.setText(responseModel.getName());
-        mTvUserId.setText(responseModel.getOwner().getLogin());
+        mTvUserId.setText(responseModel.getOwner().getLogin().toString());
     }
 }

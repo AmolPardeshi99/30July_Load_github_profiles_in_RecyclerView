@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -42,7 +43,6 @@ public class BlankFragment extends Fragment {
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView(view);
-
     }
 
     private void callApi() {
@@ -77,11 +77,11 @@ public class BlankFragment extends Fragment {
         });
     }
 
-
     private void setRecylcerview() {
         profileAdapter = new ProfileAdapter(responseModelList);
-        GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(),2);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(profileAdapter);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
     }
 }
